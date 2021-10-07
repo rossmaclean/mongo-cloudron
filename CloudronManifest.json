@@ -1,0 +1,30 @@
+{
+  "id": "com.mongodb.cloudronapp",
+  "title": "Example Application",
+  "author": "Girish Ramakrishnan <girish@cloudron.io>",
+  "description": "file://docs/DESCRIPTION.md",
+  "icon": "file://docs/icon.png",
+  "changelog": "file://docs/CHANGELOG",
+  "postInstallMessage": "file://docs/POSTINSTALL.md",
+  "tagline": "Document oriented DBMS",
+  "version": "1.0.0",
+  "healthCheckPath": "/",
+  "httpPort": 3000,
+  "tcpPorts": {
+    "SERVER_PORT": {
+      "title": "Server Port",
+      "description": "Server Port where clients connect",
+      "defaultValue": 27017
+    }
+  },
+  "addons": {
+    "localstorage": {}
+  },
+  "manifestVersion": 2,
+  "website": "https://www.mongodb.com/",
+  "contactEmail": "support@clourdon.io",
+  "tags": [ "nosql", "database" ],
+  "documentationUrl": "https://docs.cloudron.io/apps/mongodb/",
+  "forumUrl": "https://forum.cloudron.io/category/49/mongodb",
+  "mediaLinks": [ "https://images.rapgenius.com/fd0175ef780e2feefb30055be9f2e022.520x343x1.jpg" ]
+}
