@@ -1,2 +1,2 @@
-health/node_modules/**
-test/node_modules/**
+/api/node_modules/**
+/test/node_modules/**

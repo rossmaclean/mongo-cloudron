@@ -2,7 +2,7 @@ name: Main CI
 
 env:
   DOCKER_USER: rossmaclean
-  PROJECT_NAME: mongo
+  PROJECT_NAME: mongo-cloudron
   CLOUDRON_SERVER: my.rossmac.co.uk
   APP_DOMAIN: mongo.rossmac.co.uk
 

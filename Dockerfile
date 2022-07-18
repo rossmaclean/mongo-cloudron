@@ -17,7 +17,6 @@ RUN apt-get update -y && \
 RUN mkdir -p "${MONGO_INSTALL_DIR}/conf" \
     && curl -Ls "https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-${MONGO_VERSION}.tgz" | tar -xz --directory "${MONGO_INSTALL_DIR}" --strip-components=1 --no-same-owner
 
-
 RUN mkdir -p ${MONGO_DATA_DIR}/db ${MONGO_DATA_DIR}/log
 
 COPY start.sh ${CODE_DIR}/
