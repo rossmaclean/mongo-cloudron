@@ -1,7 +1,7 @@
 {
   "id": "com.mongodb.cloudronapp",
-  "title": "Example Application",
-  "author": "Girish Ramakrishnan <girish@cloudron.io>",
+  "title": "MongoDB",
+  "author": "Ross MacLean <ross@rossmac.co.uk>",
   "description": "file://docs/DESCRIPTION.md",
   "icon": "file://docs/icon.png",
   "changelog": "file://docs/CHANGELOG",
