@@ -21,8 +21,7 @@ RUN mkdir -p ${MONGO_DATA_DIR}/db ${MONGO_DATA_DIR}/log
 
 COPY start.sh ${CODE_DIR}/
 COPY api/ ${CODE_DIR}/api
-#COPY mongod.conf ${MONGO_DATA_DIR}/
-COPY mongod.conf /app/data/mongod.conf
+COPY mongod.conf ${MONGO_DATA_DIR}/
 COPY supervisor/* /etc/supervisor/conf.d/
 
 RUN ln -sf /run/supervisord.log /var/log/supervisor/supervisord.log
