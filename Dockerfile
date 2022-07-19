@@ -17,17 +17,14 @@ RUN apt-get update -y && \
 RUN mkdir -p "${MONGO_INSTALL_DIR}/conf" \
     && curl -Ls "https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-${MONGO_VERSION}.tgz" | tar -xz --directory "${MONGO_INSTALL_DIR}" --strip-components=1 --no-same-owner
 
-RUN mkdir -p ${MONGO_DATA_DIR}/db ${MONGO_DATA_DIR}/log
 
 COPY start.sh ${CODE_DIR}/
 COPY api/ ${CODE_DIR}/api
-COPY mongod.conf ${MONGO_DATA_DIR}/
+COPY mongod.conf ${CODE_DIR}/
 COPY supervisor/* /etc/supervisor/conf.d/
 
 RUN ln -sf /run/supervisord.log /var/log/supervisor/supervisord.log
 
 RUN npm install --prefix ${CODE_DIR}/api
 
-RUN chown -R cloudron:cloudron ${MONGO_DATA_DIR}
-
-CMD [ "/app/code/start.sh" ]
+CMD [ "MONGO_DATA_DIR=${MONGO_DATA_DIR}", "CODE_DIR=${CODE_DIR}", "/app/code/start.sh" ]
