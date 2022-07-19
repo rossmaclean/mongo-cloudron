@@ -27,4 +27,4 @@ RUN ln -sf /run/supervisord.log /var/log/supervisor/supervisord.log
 
 RUN npm install --prefix ${CODE_DIR}/api
 
-CMD [ "MONGO_DATA_DIR=${MONGO_DATA_DIR}", "CODE_DIR=${CODE_DIR}", "/app/code/start.sh" ]
+CMD [ "MONGO_DATA_DIR=${MONGO_DATA_DIR} CODE_DIR=${CODE_DIR} /app/code/start.sh" ]
